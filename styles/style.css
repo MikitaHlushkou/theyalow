@@ -1,0 +1,35 @@
+.main-wrapper{
+    width: 1024px;
+    margin: 0 auto;
+    margin-top: 60px;
+    color: white;
+
+}
+
+header{
+    display: flex;
+    height: 160px;
+}
+.wrapper{
+    background-image: url(/assets/images/bg-header.png);
+}
+.video-section video{
+    width: 549px;
+height: 327px;
+}
+nav>ul{
+    display: flex;
+    list-style: none;
+    }
+  nav>ul>li{
+      padding-left: 20px;
+  }  
+
+  .video-section{
+      display: flex;
+      justify-content: space-between;
+  }
+  .colums-section{
+      display: flex;
+      justify-content: space-between;
+  }
