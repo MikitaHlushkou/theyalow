@@ -212,6 +212,12 @@ nav>ul>li:hover {
     color: #f5c506;
 }
 
+.video-section .header-video .mobile-video {
+
+    display: none;
+
+}
+
 .slider-button {
     background-color: #c4a00c;
     position: absolute;
@@ -225,14 +231,14 @@ nav>ul>li:hover {
 
 
 .slider-button.left {
-    left: 302px;
-    bottom: 526px;
+    left: 216px;
+    bottom: 476px;
 
 }
 
 .slider-button.right {
-    right: 302px;
-    bottom: 526px;
+    right: 216px;
+    bottom: 476px;
     transform: rotate(180deg);
 
 }
@@ -327,8 +333,8 @@ nav>ul>li:hover {
 
 .main-section {
     background-image: url("/assets/images/bg-slider-section.png");
-    height: 507px;
-    border: 1px solid;
+    height:510px;
+   
 }
 
 .main-section h2 {
@@ -338,7 +344,7 @@ nav>ul>li:hover {
     font-family: "PTSans-Regular";
     font-size: 37px;
     font-weight: normal;
-    margin-top: 42px;
+    padding-top: 42px;
     margin-bottom: 40px;
     color: white;
 }
@@ -363,7 +369,7 @@ nav>ul>li:hover {
 
 }
 
-.main-section .article-container .text-article p {
+.main-section .article-container .text-article p .design-text{
     width: 279px;
     height: 307px;
     font-size: 29px;
@@ -371,7 +377,9 @@ nav>ul>li:hover {
     line-height: 38px;
     color: #ffffff;
 }
-
+.main-section .article-container .text-article .mobile-text{
+    display:none;
+}
 .main-section .article-container .video-article {
     width: 315px;
     position: relative;
@@ -391,8 +399,8 @@ nav>ul>li:hover {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
+       top: 52%;
+    left: 51%;
     width: 61px;
     height: 61px;
     border-radius: 50%;
@@ -435,6 +443,10 @@ nav>ul>li:hover {
 
 .main-section .article-container .article-twitter img.twitter-logo {
     width: 163px;
+}
+
+.main-section .article-container .article-twitter .mobile-twitter {
+    display: none;
 }
 
 .main-section .article-container .article-twitter div.counter {
@@ -621,35 +633,67 @@ footer div.logo img {
     margin-left: 1px;
 }
 
+.perenos {
+    width: 100%;
+    display: none;
+}
+
 @media screen and (max-width: 700px) {
+    body {
+        border: 0px;
+    }
+
+    .scroll-wrapper {
+        display: none;
+    }
+
+    .slider-button.right {
+        display: none;
+    }
+
+    .slider-button.left {
+        display: none;
+    }
+
     .wrapper {
         width: 640px;
+        margin: 0 0;
     }
 
     .container {
         width: 100%;
-        height: 350px;
+        height: 380px;
+    }
+
+    .container .wrapper {
+        height: 380px;
     }
 
     h1 {
         margin: 0 auto;
+        padding-top: 27px;
+        padding-right: 12px;
         font-size: 19px;
         letter-spacing: 0px;
         color: #ffffff;
         font-family: "Lucida Sans";
         font-style: italic;
         text-align: center;
-        box-shadow: 1px 1.732px 0px rgba(0, 0, 0, 0.42);
+
     }
 
     .logo {
-        margin-left: -40px;
+        width: 185px;
     }
 
     .logo a img {
         margin-left: 0px;
         height: 39px;
         width: 40px;
+        padding-top: 13px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+
     }
 
     header {
@@ -660,7 +704,39 @@ footer div.logo img {
     }
 
     .header-main {
+        height: 318px;
+    }
+
+    .header-main .video-section {
+        height: 318px;
+    }
+
+    .video-section .header-video {
+        height: 318px;
+    }
+
+    .video-section .header-video .desktop-video {
+
+        display: none;
+
+    }
+
+    .video-section .header-video .mobile-video {
+
+        display: block;
+
+    }
+
+    .video-section video[poster] {
+        width: 100%;
         height: 320px;
+        object-fit: none;
+        object-position: 0px 0px;
+    }
+
+    .sound-button {
+        bottom: 16px;
+        right: 55px;
     }
 
     .header-main p {
@@ -671,16 +747,338 @@ footer div.logo img {
         height: 62px;
         width: 455px;
         margin: 0;
+        padding-top: 5px;
+        font-size: 19px;
+        letter-spacing: 0px;
+        color: #9b7d08;
+        font-family: "Segoe WP";
+        text-align: center;
+
+    }
+    
+    nav>ul>li:nth-child(1) img{
+        width: 24px;
+        height: 22px;
+    }
+    nav>ul>li:nth-child(2) img{
+        width: 22px;
+        height: 22px;
+    }
+    nav>ul>li:nth-child(3) img{
+        width: 28px;
+        height: 21px;
+    }
+    
+    .main-nav ul li:nth-child(1) {
+        height: 52px;
+        padding-left: 3px;
+        margin: 0;
+
 
     }
 
-    .video-section {
-        display: block;
+    .main-nav ul li:nth-child(2) {
+        width: 133px;
+        height: 52px;
+        padding-left: 1px;
+        padding-right: 0px;
+        margin: 0;
+    }
+
+    .main-nav ul li:nth-child(3) {
+        width: 150px;
+        height: 52px;
+        padding-left: 1px;
+        margin: 0;
+
+
     }
 
     .video-section .header-video {
         width: 100%;
         object-fit: cover;
+        margin-left: 0px;
+    }
+
+    .start-stop-button.bottom {
+        left: 82px;
+        bottom: 14px;
+    }
+
+    .header-video .control-panel .timeline {
+        bottom: 23px;
+        left: 135px;
+    }
+
+    .start-stop-button.center {
+        left: 51%;
+    }
+
+    .colums-section {
+        height: 170px;
+    }
+
+    .colums-section .wrapper {
+        height: 170px;
+    }
+
+    .colums-container {
+        width: 640px;
+
+    }
+
+    .colums-section .colums-container>div {
+        border: none;
+    }
+
+    .colums-section .colums-container>div:nth-child(3) {
+        border: none;
+    }
+
+    .colums-section .colums-container>div>div {
+        font-size: 23px;
+        letter-spacing: 0px;
+        color: #000000;
+        font-family: "Segoe UI";
+        font-weight: 300;
+        border: none;
+    }
+
+    .colums-container .first-column img {
+        width: 89px;
+        height: 61px;
+        position: relative;
+        top: -6px;
+        left: -16px;
+    }
+
+    .colums-container .first-column .design-text {
+        position: relative;
+        bottom: -1px;
+        right: 20px;
+    }
+
+    .colums-container .second-column img {
+        width: 67px;
+        height: 69px;
+        position: relative;
+        top: 6px;
+        left: -2px;
+    }
+
+    .colums-container .second-column .castomise-text {
+        position: relative;
+        bottom: -9px;
+        right: -1px;
+    }
+
+    .colums-container .third-column img {
+        width: 68px;
+        height: 69px;
+        position: relative;
+        top: -2px;
+        left: 14px;
+    }
+
+    .colums-container .third-column .itsfree-text {
+        position: relative;
+        bottom: -1px;
+        right: -16px;
+    }
+
+    .main-section h2 {
+        display: none;
+    }
+
+    .main-section {
+    background-image: none;
+    border: none;
+    height: 469px;
+    }
+
+    .main-section .article-container {
+        height: 230px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 21px 10px 8px 10px;
+        background:none;
+
+    }
+
+    .main-section .article-container .text-article {
+        width: 300px;
+        height: 230px;
+        padding: 12px 36px 34px 24px;
+    }
+    .main-section .article-container .text-article  .desktop-text{
+        display:none;
+    }
+    .main-section .article-container .text-article  .mobile-text{
+        display:block;
+    }
+    .main-section .article-container .text-article  .mobile-text{
+        width: 279px;
+        height: 307px;
+        font-size: 29px;
+letter-spacing: 0px;
+line-height: 33px;
+color: #ffffff;
+font-family: "SegoeWP-Light";
+font-weight: 300;
+
+    }
+    .main-section img.plus{
+        width: 10px;
+height: 10px;
+bottom: 19px;
+    right: 15px;
+    }
+
+   
+
+    .main-section .article-container .video-article video {
+        width: 315px;
+        margin-left: 1px;
+    }
+
+    .main-section .article-container .article-twitter {
+        height: 230px;
+        margin: 8px -9px 0px -9px;
+        width: 640px;
+        background-color: #f5c507;
+    }
+
+    .main-section .article-container .article-twitter .plus,
+    .main-section .article-container .article-twitter .counter {
+
+        display: none;
+    }
+    .main-section .article-container .article-twitter img.twitter-logo{
+        position: relative;
+        width: 158px;
+        left: 83px;
+        top: 13px;
+}
+    .main-section .article-container .article-twitter .twitter-logo-section {
+        width: 310px;
+    }
+
+    .main-section .article-container .article-twitter .mobile-twitter {
+        width: 323px;
+        display: block;
+        margin-left: 10px;
+        padding-top:13px;
+    }
+
+    .main-section .article-container .article-twitter .mobile-twitter .previous-tweets:not(:last-child) {
+        width: 284px;
+        height: 44px;
+        background-image: url("/assets/images/mobile-twitter-messageBg.png");
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .main-section .article-container .article-twitter .mobile-twitter p {
+
+        width: 284px;
+        padding-left: 33px;
+        padding-top: 10px;
+        font-size: 13px;
+        letter-spacing: 0px;
+        color: #8f8e8e;
+        font-family: "Arial";
+        line-height: 1.2;
+       
+    }
+    .main-section .article-container .article-twitter .mobile-twitter div:nth-child(1) {
+        opacity: 1;
+    }
+    .main-section .article-container .article-twitter .mobile-twitter div:nth-child(2) {
+        opacity: 0.7;
+    }
+    .main-section .article-container .article-twitter .mobile-twitter div:nth-child(3) {
+        opacity: 0.6;
+    }
+    .main-section .article-container .article-twitter .mobile-twitter .main-form {
+
+        width: 275px;
+        height: 33px;
+        margin-left: 10px;
+        background-image: url("/assets/images/form-background.png");
+        border-radius: 10px;
+        z-index: 2;
+    }
+
+    .main-section .article-container .article-twitter .mobile-twitter .main-form .left {
+        display: inline-block;
+        width: 200px;
+    }
+
+    .main-section .article-container .article-twitter .mobile-twitter .main-form .right {
+        display: inline-block;
+        width: 70px;
+    }
+
+    .main-section .article-container .article-twitter .mobile-twitter .main-form .tweet {
+        height: 29px;
+        width: 190px;
+        background: none;
+        border: none;
+        outline: none;
+        padding-left: 10px;
+    }
+
+    .main-section .article-container .article-twitter .mobile-twitter .main-form .submit {
+        width: 70px;
+        height: 29px;
+        margin-top: 3px;
+        display: inline-block;
+        font-size: 15px;
+        letter-spacing: 0px;
+        color: #ffffff;
+        font-family: "Arial";
+        background: none;
+        border: none;
+        outline: none;
+        background: url("/assets/images/test.png") no-repeat;
+    }
+
+    .bottom-section {
+        height: 472px;
+    }
+
+    .bottom-section .wrapper {
+        height: 465px;
+    }
+
+    .bottom-section .wrapper ul {
+        display: none;
+    }
+    .bottom-section .image-content {
+        margin-left: 57px;
+    margin-top: 28px;
+    }
+    .bottom-section .image-content .label-for-desktop{
+        top: -41px;
+        left: -29px;
+    }
+
+    footer div.logo img{
+        width: 29px;
+height: 29px;
+margin-left: 54px;
+margin-top: -4px;
+    }
+
+    footer h3{
+        margin-top: 15px;
+    margin-left: 9px;
+        font-size: 17px;
+letter-spacing: 0px;
+color: #ffffff;
+font-family: "Lucida Sans";
+font-style: italic;
+text-align: center;
     }
 }
 
